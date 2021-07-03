@@ -1,0 +1,58 @@
+
+  <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 問題文 -->
+    <div>好きなスポーツはなんでしょう</div>
+
+    <!-- 選択肢を作成 -->
+    <button id="choice1">テニス</button>
+    <button id="choice2">サッカー</button>
+    <button id="choice3">陸上</button>
+    <script>
+      // 要素取得する
+      const BUTTON1=document.getElementById("choice1")
+      const BUTTON2=document.getElementById("choice2")
+      const BUTTON3=document.getElementById("choice3")
+​
+      // ボタンをクリックした時にコンソールで表示させたい
+      BUTTON1.onclick = function() {
+       console.log("正解です！")
+      }
+
+      BUTTON2.onclick = function() {
+       console.log("違います！")
+      }
+
+      BUTTON3.onclick = function() {
+       console.log("違います！")
+      }
+    </script>
+  </body>
+</html>
+
+
+
+const yumeto = {
+  name: '内田夢十',
+  university: '上智大学',
+  age: 21,
+  hobby: ['テニス','プロ野球'],
+  familly: {
+    papa: 'あつお',
+    mama: 'のりよ',
+  },
+  isMentor: false,
+  sayHello: function () {
+    alert(`こんにちはゆめとです!お願いします!`)
+  },
+}
+​
+console.log(Name.name)
+Name.sayHello()
