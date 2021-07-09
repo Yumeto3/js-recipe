@@ -1,19 +1,14 @@
-// イベントが発生する要素を取得する
-const button = document.getElementById("button")
+const number = 24;
 
-const alertMessage = function() {
-  alert("クリックしたね")
+for (let n = 1; n <= number; n++) {
+  if (n % 15 === 0) {
+    console.log(n + "FizzBuzz");
+  } else if (n % 3 === 0) {
+    console.log(n + "Fizz");
+  } else if (n % 5 === 0) {
+    console.log(n + "Buzz");
+  } else {
+    console.log(n);
+  }
 }
 
-// 関数を登録
-button.onclick = alertMessage
-
-const inputText = document.getElementById("input-text")
-const inputDate = document.getElementById("input-date")
-
-const logValue = function(e) {
-  console.log(e.target.value)
-}
-
-inputText.oninput = logValue
-inputDate.oninput = logValue
