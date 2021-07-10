@@ -15,15 +15,28 @@
       const addButton = document.getElementById("add-button");
       const container = document.getElementById("memo-container");
 
+      let memos= []
+
       addButton.onclick = function () {
         const text = inputText.value;
 
-        // todoを作る
+        memos.push(text)
+
+        container.innerHTML = ""
+
+        for (let i = 0;i < memos.length;i++) {
+
+          console.log(i)
+          // todoを作る
+        const text = memos [i]
         const todo = document.createElement("div");
         todo.textContent = text;
 
         // containerの末尾にtodoを追加する。
         container.append(todo);
+        }
+
+        
       };
     </script>
   </body>
