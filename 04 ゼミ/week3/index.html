@@ -1,74 +1,68 @@
-
-  <!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- 問題文 -->
-    <div>好きなスポーツはなんでしょう</div>
-
-    <!-- 選択肢を作成 -->
-    <button id="choice1">テニス</button>
-    <button id="choice2">サッカー</button>
-    <button id="choice3">陸上</button>
-    <script>
-      // 要素取得する
-      const BUTTON1=document.getElementById("choice1")
-      const BUTTON2=document.getElementById("choice2")
-      const BUTTON3=document.getElementById("choice3")
-​
-      // ボタンをクリックした時にコンソールで表示させたい
-      BUTTON1.onclick = function() {
-       console.log("正解です！")
-      }
-
-      BUTTON2.onclick = function() {
-       console.log("違います！")
-      }
-
-      BUTTON3.onclick = function() {
-       console.log("違います！")
-      }
-    </script>
-  </body>
-</html>
-
-
-
-const yumeto = {
-  name: '内田夢十',
-  university: '上智大学',
-  age: 21,
-  hobby: ['テニス','プロ野球'],
-  familly: {
-    papa: 'あつお',
-    mama: 'のりよ',
-  },
-  isMentor: false,
-  sayHello: function () {
-    alert(`こんにちはゆめとです!お願いします!`)
-  },
-}
-​
-console.log(Name.name)
-Name.sayHello()
-
-
-
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>WebExpertコーステンプレート</title>
+    <title>自販機</title>
   </head>
+
   <body>
-    <script src="main.js"></script>
+    <h1>自販機</h1>
+    
+     <h2>自販機にお金を入れる</h2>
+    <section>
+      <button id="button100">100円入れる</button>
+        <h2>↓財布↓</h2>
+        <div id="saifu-display">1000</div>
+        <p>
+        <h2 id="money">↓投入金額↓</h2>
+        </p>
+        <div id="moneyR">0</div>
+      <h3>商品を買う</h3>
+  
+      <button id="buy-button-tea">お茶(100円)</button>
+      <h3 id="result">買った商品</h3>
+
+    
+      <div id="display-items"></div>
+    </section>
+
+    <script>
+    // HTML要素を取得する
+      const buyButtonTea = document.getElementById("buy-button-tea")
+      const displayItems = document.getElementById("display-items")
+      const saifuDisplay = document.getElementById("saifu-display")
+      const moneyR = document.getElementById("moneyR")
+      const button100 = document.getElementById("button100")
+
+      let saifu = 1000
+      let jihankiMoney = 0
+      
+			
+      // buyButtonTea を押した時の処理
+      buyButtonTea.onclick = function() {
+        if (jihankiMoney >= 100) {
+        jihankiMoney -= 100
+        moneyR.textContent = jihankiMoney;
+        displayItems.textContent += "🍵"
+        }
+      }
+
+      //100button　を押した時の処理
+      button100.onclick = function(){
+        if(saifu >= 100){
+        saifu -= 100
+        saifuDisplay.textContent = saifu;
+        jihankiMoney += 100
+        moneyR.textContent = jihankiMoney;
+        }
+
+      }
+      
+     
+      
+    </script>
   </body>
 </html>
 
