@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // HTML(Vue)
+// type属性で入力する文字を半角数字に限定できる。
+<input type="number" v-model="nyuryokugaku">
+
+// Vue
+new Vue({
+  data: {
+    nyuryokugaku: 0,
+  },
+  methods: {
+    nyukin: function () {
+      // inputで入力される値はString型なので、Number() でNumber型に変換しないといけない。
+      this.zandaka += Number(this.nyuryokugaku);
+    },
+</body>
+</html>
